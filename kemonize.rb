@@ -290,7 +290,7 @@ EOS
 
 path = ARGV[0]
 
-unless File.exist?(path)
+if path.nil? || !File.exist?(path)
   puts 'フレンズのもとがいないよ！'
   exit
 end
